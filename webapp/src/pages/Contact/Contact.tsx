@@ -18,7 +18,17 @@ export const Contact = () => {
     const handleLogin = useCallback(async (values: any) => {}, []);
 
     return (
-        <Flex direction="column" width="half" gap={7} padding="9">
+        <Flex
+            direction="column"
+            width="half"
+            css={{
+                "@mbp1": {
+                    width: "$full",
+                },
+            }}
+            gap={7}
+            padding="9"
+        >
             <FormRoot
                 mode="all"
                 onSubmit={handleLogin}
