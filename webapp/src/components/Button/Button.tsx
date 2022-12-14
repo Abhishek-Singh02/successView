@@ -3,7 +3,7 @@ import { VariantProps } from "@stitches/react";
 import { ComponentProps } from "react";
 import { styled, Alias, CSS, css, PropsWithCSS } from "../../styles";
 
-export const buttonStyles = css( {
+export const buttonStyles = css({
     all: "unset",
     boxSizing: "border-box",
     alignItems: "center",
@@ -11,16 +11,16 @@ export const buttonStyles = css( {
     userSelect: "none",
 
     "&::before": {
-        boxSizing: "border-box"
+        boxSizing: "border-box",
     },
     "&::after": {
-        boxSizing: "border-box"
+        boxSizing: "border-box",
     },
     "&:disabled": {
         backgroundColor: "$appText",
         color: "$appBorder",
         pointerEvents: "none",
-        userSelect: "none"
+        userSelect: "none",
     },
 
     display: "inline-flex",
@@ -38,28 +38,28 @@ export const buttonStyles = css( {
         size: {
             small: {
                 padding: "$3 $6",
-                typography: "$overlineSmall"
+                typography: "$overlineSmall",
             },
             medium: {
                 padding: "$4 $6",
-                typography: "$overlineMedium"
+                typography: "$overlineMedium",
             },
             large: {
                 padding: "$5 $6",
-                typography: "$overlineMedium"
-            }
+                typography: "$overlineMedium",
+            },
         },
         inverted: {
             true: {
                 color: "$appBase",
-                backgroundColor: "$appTextContrast"
-            }
+                backgroundColor: "$appSecondary",
+            },
         },
         fullWidth: {
             true: {
-                width: "100%"
-            }
-        }
+                width: "100%",
+            },
+        },
     },
     compoundVariants: [
         {
@@ -70,18 +70,18 @@ export const buttonStyles = css( {
                     opacity: 0.8,
                     color: "$appBorder",
                     pointerEvents: "none",
-                    userSelect: "none"
-                }
-            }
-        }
+                    userSelect: "none",
+                },
+            },
+        },
     ],
     defaultVariants: {
         size: "medium",
-        fullWidth: "true"
-    }
-} );
+        fullWidth: "true",
+    },
+});
 
-export const Button = styled( Primitive.button, buttonStyles );
+export const Button = styled(Primitive.button, buttonStyles);
 
 export interface ButtonProps
     extends ComponentProps<typeof Button>,

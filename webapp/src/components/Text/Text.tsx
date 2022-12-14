@@ -1,7 +1,7 @@
 import { Primitive } from "@radix-ui/react-primitive";
 import { AliasSolid, css, styled } from "../../styles";
 
-export const textCss = css( {
+export const textCss = css({
     userSelect: "none",
     color: "inherit",
     variants: {
@@ -112,6 +112,6 @@ export const textCss = css( {
     defaultVariants: {
         color: "appText"
     }
-} );
+});
 
-export const Text = styled( Primitive.span, textCss );
+export const Text = styled(Primitive.span, textCss);

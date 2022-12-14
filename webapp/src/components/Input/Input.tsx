@@ -5,19 +5,19 @@ import * as icons from "react-feather";
 import { Box } from "../Box";
 import { Flex } from "../Flex";
 
-const StyledInputBox = styled( Box, {
+const StyledInputBox = styled(Box, {
     width: "100%",
     position: "relative",
     borderWidth: "$rg",
-    borderColor: "$appText",
+    borderColor: "$appSecondary",
     borderStyle: "solid",
     padding: "$4",
     "&:focus-within,&:hover,&:hover>*,&:focus-within>*": {
         borderColor: "$appTextContrast",
         color: "$appTextContrast",
         "&::placeholder": {
-            color: "$appTextContrast"
-        }
+            color: "$appTextContrast",
+        },
     },
     variants: {
         inverted: {
@@ -27,43 +27,43 @@ const StyledInputBox = styled( Box, {
                 "&>*": {
                     color: "$appBorder !important",
                     "&::placeholder": {
-                        color: "$appBorder "
-                    }
+                        color: "$appBorder ",
+                    },
                 },
                 "&:focus-within,&:hover,&:hover>*,&:focus-within>*": {
                     borderColor: "$appBase",
                     color: "$appBase",
                     "&::placeholder": {
-                        color: "$appBase"
-                    }
-                }
-            }
+                        color: "$appBase",
+                    },
+                },
+            },
         },
         compact: {
             true: {
-                padding: "$3 $4"
-            }
-        }
+                padding: "$3 $4",
+            },
+        },
     },
     defaultVariants: {
-        compact: false
-    }
-} );
+        compact: false,
+    },
+});
 
-const StyledIconBox = styled( Flex, {
+const StyledIconBox = styled(Flex, {
     height: "$full",
     position: "absolute",
     top: "$0",
     left: "$0",
-    padding: "$4"
-} );
+    padding: "$4",
+});
 
-const StyledInput = styled( "input", {
+const StyledInput = styled("input", {
     all: "unset",
     width: "$full",
     typography: "$captionMedium",
-    height: "$full"
-} );
+    height: "$full",
+});
 
 export interface InputProps extends HTMLProps<HTMLInputElement> {
     icon?: any;
@@ -72,8 +72,8 @@ export interface InputProps extends HTMLProps<HTMLInputElement> {
 }
 
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-    ( { icon, inverted, compact, ...props }, ref ) => {
-        const Icon = icons[ icon as keyof typeof icons ] ?? Fragment;
+    ({ icon, inverted, compact, ...props }, ref) => {
+        const Icon = icons[icon as keyof typeof icons] ?? Fragment;
         return (
             <StyledInputBox
                 compact={compact}

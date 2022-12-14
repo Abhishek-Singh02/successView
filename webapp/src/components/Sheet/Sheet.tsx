@@ -1,36 +1,37 @@
-import { Flex } from "@/components";
+import { Flex, IconButton } from "@/components";
 import { keyframes, PropsWithCSS, styled } from "@/styles";
 import * as DialogPrimitive from "@radix-ui/react-dialog";
 import { VariantProps } from "@stitches/react";
 import { ComponentProps, ElementRef, forwardRef } from "react";
+import { X } from "react-feather";
 
-const fadeOut = keyframes( {
+const fadeOut = keyframes({
     from: { opacity: "1" },
-    to: { opacity: "0" }
-} );
+    to: { opacity: "0" },
+});
 
-const fadeIn = keyframes( {
+const fadeIn = keyframes({
     from: { opacity: "0" },
-    to: { opacity: "1" }
-} );
+    to: { opacity: "1" },
+});
 
-const slideIn = keyframes( {
+const slideIn = keyframes({
     from: { transform: "$$transformValue" },
-    to: { transform: "translate3d(0,0,0)" }
-} );
+    to: { transform: "translate3d(0,0,0)" },
+});
 
-const slideOut = keyframes( {
+const slideOut = keyframes({
     from: { transform: "translate3d(0,0,0)" },
-    to: { transform: "$$transformValue" }
-} );
+    to: { transform: "$$transformValue" },
+});
 
-const SheetTitle = styled( DialogPrimitive.Title, {
+const SheetTitle = styled(DialogPrimitive.Title, {
     color: "$appBlack",
     typography: "$overlineLarge",
-    textTransform: "uppercase"
-} );
+    textTransform: "uppercase",
+});
 
-const StyledOverlay = styled( DialogPrimitive.Overlay, {
+const StyledOverlay = styled(DialogPrimitive.Overlay, {
     position: "fixed",
     backgroundColor: "$overlay",
     top: 0,
@@ -38,30 +39,34 @@ const StyledOverlay = styled( DialogPrimitive.Overlay, {
     bottom: 0,
     left: 0,
     '&[data-state="open"]': {
-        animation: `${fadeIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`
+        animation: `${fadeIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,
     },
     '&[data-state="closed"]': {
-        animation: `${fadeOut} 150ms cubic-bezier(0.22, 1, 0.36, 1)`
-    }
-} );
+        animation: `${fadeOut} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,
+    },
+});
 
-const StyledContent = styled( DialogPrimitive.Content, {
+const StyledContent = styled(DialogPrimitive.Content, {
     position: "sticky",
     boxShadow: "$4",
-    backgroundColor: "$appTextContrast",
-    paddingInline: "$9",
+    backgroundColor: "$appSecondary",
+    paddingInline: "$5",
     paddingBottom: "$4",
+    paddingTop: "$6",
     overflow: "auto",
     top: 0,
     bottom: 0,
     height: "$full",
     willChange: "transform",
     userSelect: "none",
+    "&:focus-visible": {
+        outline: "none",
+    },
     '&[data-state="open"]': {
-        animation: `${slideIn} 250ms ease-in-out`
+        animation: `${slideIn} 400ms ease-in-out`,
     },
     '&[data-state="closed"]': {
-        animation: `${slideOut} 250ms cubic-bezier(0.22, 1, 0.36, 1)`
+        animation: `${slideOut} 400ms cubic-bezier(0.22, 1, 0.36, 1)`,
     },
     variants: {
         side: {
@@ -69,47 +74,37 @@ const StyledContent = styled( DialogPrimitive.Content, {
                 $$transformValue: "translate3d(0,-100%,0)",
                 width: "$full",
                 height: "fit-content",
-                bottom: "auto"
+                bottom: "auto",
             },
             bottom: {
                 $$transformValue: "translate3d(0,100%,0)",
                 width: "$full",
                 height: "fit-content",
                 bottom: 0,
-                top: "auto"
-            }
-        }
+                top: "auto",
+            },
+            right: {
+                $$transformValue: "translate3d(100%,0,0)",
+                width: "fit-content",
+                right: 0,
+            },
+            left: {
+                $$transformValue: "translate3d(-100%,0,0)",
+                width: "fit-content",
+                "@mbp1": {
+                    width: "80%",
+                },
+                left: 0,
+            },
+        },
     },
     defaultVariants: {
-        side: "bottom"
-    }
-} );
-const StyledCloseButton = styled( DialogPrimitive.Close, Flex, {
-    border: "none",
-    cursor: "pointer",
-    userSelect: "none"
-} );
-const StyledHandle = styled( "div", {
-    all: "unset",
-    borderRadius: "$2",
-    width: "$handleWidthRg",
-    height: "$handleHeightRg",
-    userSelect: "none",
-    backgroundColor: "$appBorder",
-    variants: {
-        inverted: {
-            true: {
-                backgroundColor: "$appText"
-            }
-        },
-        size: {
-            small: {
-                width: "$handleWidthSm",
-                height: "$handleHeightSm"
-            }
-        }
-    }
-} );
+        side: "left",
+    },
+});
+const StyledCloseButton = styled(DialogPrimitive.Close, {
+    color: "$appBase",
+});
 
 const Sheet = DialogPrimitive.Root;
 const SheetTrigger = DialogPrimitive.Trigger;
@@ -121,24 +116,17 @@ export type SheetContentProps = ComponentProps<typeof DialogPrimitive.Content> &
     PropsWithCSS;
 
 const SheetContent = forwardRef<ElementRef<"div">, SheetContentProps>(
-    ( { children, ...props }, forwardedRef ) => (
+    ({ children, ...props }, forwardedRef) => (
         <DialogPrimitive.Portal>
             <StyledOverlay />
-            <StyledContent {...props} ref={forwardedRef}>
-                <Flex direction="column" size="full" center gap="6">
-                    <Flex direction="column" size="full" gap="8">
-                        <StyledCloseButton
-                            tabIndex={-1}
-                            height="8"
-                            align="end"
-                            width="full"
-                            justify="center"
-                        >
-                            <StyledHandle />
+            <StyledContent tabIndex={-1} {...props} ref={forwardedRef}>
+                <Flex width="full" direction="column">
+                    <Flex width="full" justify="end">
+                        <StyledCloseButton asChild>
+                            <X size="1rem" strokeWidth={2} />
                         </StyledCloseButton>
-                        {children}
                     </Flex>
-                    <StyledHandle size="small" />
+                    {children}
                 </Flex>
             </StyledContent>
         </DialogPrimitive.Portal>
@@ -151,5 +139,5 @@ export {
     SheetContent,
     SheetClose,
     SheetTitle,
-    SheetDescription
+    SheetDescription,
 };

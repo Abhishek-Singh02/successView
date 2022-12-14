@@ -25,7 +25,7 @@ export const {
             appBorder: "#9FA5A4",
             appText: "#111716",
             appTextContrast: "#111716",
-            appPrimary: "##F2734E",
+            appPrimary: "#F2734E",
             appSecondary: "#1E2036",
             appSuccess: "#6BB324",
             appError: "#EC0D0D",
@@ -38,7 +38,7 @@ export const {
         },
         fonts: {
             sans: [
-                "Times New Roman",
+                "Mukta",
                 "Roboto,sans-serif",
                 "Ubuntu",
                 "Nunito",
