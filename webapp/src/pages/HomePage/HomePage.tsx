@@ -7,7 +7,7 @@ import { Outlet } from "react-router-dom";
 export type HomePageProps = {};
 
 export const HomePage: FC<HomePageProps> = () => {
-    return <>Home</>;
+    return <Flex size="full">Home</Flex>;
 };
 
 export default HomePage;
