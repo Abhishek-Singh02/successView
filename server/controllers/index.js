@@ -1,4 +1,6 @@
 module.exports = {
     postMagazine: require("./postMagazines"),
-    getAllMagazines: require("./getAllMagazines")
+    getAllMagazines: require("./getAllMagazines"),
+    postBlog: require("./postBlog"),
+    getAllBlogs: require("./getBlogs")
 }

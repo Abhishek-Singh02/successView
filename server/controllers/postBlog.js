@@ -1,27 +1,27 @@
 const cloudinary = require("../utils/cloudinary");
-const Magazine = require("../models/magazine");
+const Blog = require("../models/blogs");
 
-const postMagazines = (async (req, res) => {
+const postBlog = (async (req, res) => {
     try {
         // Upload image to cloudinary
         const result = await cloudinary.uploader.upload(req.file.path);
-        // Create new magazine
-        let magazine = new Magazine({
+        // Create new Blog
+        let blog = new Blog({
             title: req.body.title,
-            description: req.body.description,
-            published: req.body.published,
+            content: req.body.content,
+            category: req.body.category,
             image: result.secure_url,
             image_ID: result.public_id,
         });
-        // save magazine details in mongodb
-        await magazine.save();
+        // save blog details in mongodb
+        await blog.save();
         res.status(200)
             .send({
 
-                magazine
+                blog
             });
     } catch (err) {
         console.log(err);
     }
 });
-module.exports = postMagazines
+module.exports = postBlog
