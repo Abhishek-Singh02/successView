@@ -10,6 +10,7 @@ const postMagazines = (async (req, res) => {
             title: req.body.title,
             description: req.body.description,
             published: req.body.published,
+            blog_ID: req.body.blog_ID,
             image: result.secure_url,
             image_ID: result.public_id,
         });
