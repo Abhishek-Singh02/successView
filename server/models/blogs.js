@@ -3,7 +3,10 @@ const mongoose = require("mongoose");
 const BlogSchema = new mongoose.Schema({
     title: String,
     content: String,
-    category: String,
+    category: {
+        type: String,
+        enum: ["healthcare"]
+    },
     image: String,
     image_ID: String,
 });

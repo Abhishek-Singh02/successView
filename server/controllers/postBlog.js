@@ -14,14 +14,14 @@ const postBlog = (async (req, res) => {
             image_ID: result.public_id,
         });
         // save blog details in mongodb
-        await blog.save();
+        await blog.save()
         res.status(200)
             .send({
 
                 blog
             });
     } catch (err) {
-        console.log(err);
+        res.status(400).send(err);
     }
 });
 module.exports = postBlog

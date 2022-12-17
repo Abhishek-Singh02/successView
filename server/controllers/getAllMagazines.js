@@ -12,7 +12,7 @@ const getAllMagazines = (async (req, res) => {
         res.status(200)
             .send(magazines);
     } catch (err) {
-        console.log(err);
+        res.status(400).send(err);
     }
 });
 

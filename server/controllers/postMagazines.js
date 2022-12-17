@@ -14,14 +14,14 @@ const postMagazines = (async (req, res) => {
             image_ID: result.public_id,
         });
         // save magazine details in mongodb
-        await magazine.save();
+        await magazine.save()
         res.status(200)
             .send({
 
                 magazine
             });
     } catch (err) {
-        console.log(err);
+        res.status(400).send(err);
     }
 });
 module.exports = postMagazines

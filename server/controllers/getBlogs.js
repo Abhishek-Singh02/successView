@@ -12,7 +12,7 @@ const getAllBlogs = (async (req, res) => {
         res.status(200)
             .send(blogs);
     } catch (err) {
-        console.log(err);
+        res.status(400).send(err);
     }
 });
 
