@@ -1,0 +1,5 @@
+export * from "./axios"
+export * from "./GetBlogs"
+export * from "./GetBlog"
+export * from "./GetMagazines"
+export * from "./GetMagazine"
