@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { CircleLoader } from 'react-spinners';
+import { CircleLoader } from "react-spinners";
 import { Flex } from "../Flex";
 
 export interface FullscreenLoaderProps {}
 
-export const FullscreenLoader: FC<FullscreenLoaderProps> = ( { } ) => {
+export const FullscreenLoader: FC<FullscreenLoaderProps> = ({}) => {
     return (
         <Flex
             direction="column"
@@ -12,15 +12,15 @@ export const FullscreenLoader: FC<FullscreenLoaderProps> = ( { } ) => {
             color="primary"
             gap="4"
             css={{
-                position: "absolute",
+                position: "relative",
                 zIndex: 99999,
                 height: "100vh",
-                width: '100vw',
+                width: "100vw",
                 top: 0,
-                left: 0
+                left: 0,
             }}
         >
-            <CircleLoader color="currentColor"  />
+            <CircleLoader color="currentColor" />
         </Flex>
-    )
-}
+    );
+};

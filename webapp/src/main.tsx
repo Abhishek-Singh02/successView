@@ -5,7 +5,13 @@ import { globalStyles } from "@/styles";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 globalStyles();
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+    defaultOptions: {
+        queries: {
+            suspense: true,
+        },
+    },
+});
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
     <React.StrictMode>

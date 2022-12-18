@@ -7,7 +7,7 @@ export const getAllMagazinesFn = async () => {
     return response.data;
 };
 
-export const UseGetMagazines = () => {
+export const useGetMagazines = () => {
     return useQuery<Magazine[]>(['magazines'], getAllMagazinesFn)
 
 }

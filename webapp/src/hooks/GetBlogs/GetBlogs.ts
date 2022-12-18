@@ -7,7 +7,7 @@ export const getAllBlogsFn = async () => {
     return response.data;
 };
 
-export const UseGetBlogs = () => {
+export const useGetBlogs = () => {
     return useQuery<Blog[]>(['blogs'], getAllBlogsFn)
 
 }

@@ -7,7 +7,7 @@ export const getOneMagazineFn = async (id: string) => {
     return response.data;
 };
 
-export const UseGetOneMagazine = (id: string) => {
+export const useGetOneMagazine = (id: string) => {
     return useQuery<Magazine>([getOneMagazineFn], () => getOneMagazineFn(id))
 
 }
