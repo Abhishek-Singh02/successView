@@ -1,4 +1,5 @@
 export * from "./HomePage"
 export * from "./NotFound"
 export * from "./AboutUs"
+export * from "./Articles"
 export * from "./Contact"

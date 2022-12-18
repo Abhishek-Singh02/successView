@@ -1,0 +1,50 @@
+import { FC } from "react";
+import { Button, Flex, Text } from "@/components";
+import { Blog } from "@/types/api";
+import { styled } from "@/styles";
+
+const BlogDescription = styled(Flex, {
+    transform: "translate3d(0,-100%,0)",
+    opacity: 0,
+    height: 0,
+    transition: "all 4s ease-all",
+});
+
+const BlogContainer = styled(Flex, {
+    backgroundColor: "white",
+    maxWidth: "370px",
+    "&:hover": {
+        boxShadow: " 0px 0px 26px -5px rgba(0,0,0,0.48)",
+        [`& ${BlogDescription}`]: {
+            transform: "translate3d(0,0,0)",
+            opacity: 1,
+            height: "100%",
+        },
+    },
+});
+
+export type BlogCardProps = {
+    blog: Blog;
+};
+
+export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
+    const { image, title, content } = blog;
+    return (
+        <BlogContainer direction="column" center padding={5} gap={7}>
+            <Flex
+                css={{
+                    height: "fit-content",
+                }}
+            >
+                <img src={image} width="100%" />
+            </Flex>
+            <Text variant="titleSmall">{title}</Text>
+            <BlogDescription direction="column" gap={3}>
+                <Text variant="captionMedium">
+                    {content.substring(0, 150)}...
+                </Text>
+                <Button inverted>Read More</Button>
+            </BlogDescription>
+        </BlogContainer>
+    );
+};

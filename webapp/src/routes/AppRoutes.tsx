@@ -1,4 +1,4 @@
-import { AboutUs, Contact, HomePage, NotFound } from "../pages";
+import { AboutUs, Articles, Contact, HomePage, NotFound } from "../pages";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "@/components";
 
@@ -10,6 +10,7 @@ export const AppRoutes = () => {
                     <Route index element={<HomePage />} />
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="contact" element={<Contact />} />
+                    <Route path="articles" element={<Articles />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Route>
