@@ -2,6 +2,7 @@ import { FC } from "react";
 import { Button, Flex, Text } from "@/components";
 import { Blog } from "@/types/api";
 import { styled } from "@/styles";
+import { useNavigate } from "react-router";
 
 const BlogDescription = styled(Flex, {
     transform: "translate3d(0,-100%,0)",
@@ -28,6 +29,7 @@ export type BlogCardProps = {
 };
 
 export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
+    const navigate = useNavigate();
     const { image, title, content } = blog;
     return (
         <BlogContainer direction="column" center padding={5} gap={7}>
@@ -43,7 +45,14 @@ export const BlogCard: FC<BlogCardProps> = ({ blog }) => {
                 <Text variant="captionMedium">
                     {content.substring(0, 150)}...
                 </Text>
-                <Button inverted>Read More</Button>
+                <Button
+                    onClick={() =>
+                        navigate(`${blog._id}`, { state: { data: blog } })
+                    }
+                    inverted
+                >
+                    Read More
+                </Button>
             </BlogDescription>
         </BlogContainer>
     );

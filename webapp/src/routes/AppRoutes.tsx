@@ -1,4 +1,11 @@
-import { AboutUs, Articles, Contact, HomePage, NotFound } from "../pages";
+import {
+    AboutUs,
+    Article,
+    Articles,
+    Contact,
+    HomePage,
+    NotFound,
+} from "../pages";
 import { Route, Routes } from "react-router-dom";
 import { Layout } from "@/components";
 
@@ -11,6 +18,7 @@ export const AppRoutes = () => {
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="articles" element={<Articles />} />
+                    <Route path="articles/:id" element={<Article />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
             </Route>
