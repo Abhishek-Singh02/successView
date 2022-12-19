@@ -93,7 +93,7 @@ export const Footer: FC<FooterProps> = () => {
                             Articles
                         </Text>
                     </Link>
-                    <Link to="contacts">
+                    <Link to="contact">
                         <Text color="base" variant="overlineSmall">
                             Contact
                         </Text>
