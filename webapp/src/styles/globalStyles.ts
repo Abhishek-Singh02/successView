@@ -1,6 +1,6 @@
 import { globalCss } from "./stitches.config";
 
-export const globalStyles = globalCss( {
+export const globalStyles = globalCss({
     "@import": [
         "url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Roboto&display=swap')"
     ],
@@ -30,7 +30,7 @@ export const globalStyles = globalCss( {
     },
     body: {
         backgroundColor: "$appBase",
-        typography: "$bodySmall",
+        typography: "$bodyMedium",
         color: "$appText",
         fontFamily: "$fonts$sans",
         WebkitFontSmoothing: "antialiased",
@@ -42,4 +42,4 @@ export const globalStyles = globalCss( {
             }
         }
     }
-} );
+});

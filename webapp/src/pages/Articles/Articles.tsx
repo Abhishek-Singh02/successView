@@ -12,7 +12,7 @@ export const Articles: FC<ArticlesProps> = () => {
     return (
         <Flex width="full" padding={9} justify="evenly" wrap="wrap" gap={7}>
             {data?.map((blog) => (
-                <BlogCard blog={blog} />
+                <BlogCard key={blog._id} blog={blog} />
             ))}
         </Flex>
     );

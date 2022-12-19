@@ -3,6 +3,7 @@ import { Blog } from "@/types/api";
 import { RecentPosts } from "@/widgets";
 import { FC } from "react";
 import { useLocation } from "react-router";
+import ReactMarkdown from "react-markdown";
 
 export type ArticleProps = {};
 
@@ -26,7 +27,14 @@ export const Article: FC<ArticleProps> = () => {
                 <Flex width="full">
                     <img src={image} width="100%" />
                 </Flex>
-                <Text variant="bodyLarge">{content}</Text>
+                <Flex
+                    width="full"
+                    direction="column"
+                    css={{ overflow: "hidden" }}
+                    gap={6}
+                >
+                    <ReactMarkdown children={content} />
+                </Flex>
             </Flex>
             <RecentPosts />
         </Flex>
