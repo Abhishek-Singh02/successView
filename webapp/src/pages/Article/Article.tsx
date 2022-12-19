@@ -1,15 +1,20 @@
 import { Flex, Text } from "@/components";
 import { Blog } from "@/types/api";
 import { RecentPosts } from "@/widgets";
-import { FC } from "react";
-import { useLocation } from "react-router";
+import { FC, useEffect } from "react";
+import { useLocation, useParams } from "react-router";
 import ReactMarkdown from "react-markdown";
+import { useGetOneBlog } from "@/hooks";
 
 export type ArticleProps = {};
 
 export const Article: FC<ArticleProps> = () => {
-    const { state } = useLocation();
-    const { title, image, content } = state.data as Blog;
+    const { id } = useParams();
+    const { data, refetch } = useGetOneBlog(id!);
+    const { title, image, content } = data as Blog;
+    useEffect(() => {
+        refetch();
+    }, [id]);
 
     return (
         <Flex
