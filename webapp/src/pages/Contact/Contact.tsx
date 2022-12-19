@@ -10,6 +10,7 @@ import {
 } from "@/components";
 import { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
+import image from "@/assets/contact.png";
 
 export const Contact = () => {
     const navigate = useNavigate();
@@ -19,51 +20,68 @@ export const Contact = () => {
 
     return (
         <Flex
-            direction="column"
-            width="half"
+            width="full"
+            center
             css={{
+                "@bp1": {
+                    height: "$full",
+                },
                 "@mbp1": {
                     width: "$full",
+                    flexDirection: "column",
                 },
             }}
             gap={7}
             padding="9"
         >
-            <FormRoot
-                mode="all"
-                onSubmit={handleLogin}
-                onSubmitError={console.log}
+            <Flex width="full">
+                <FormRoot
+                    mode="all"
+                    onSubmit={handleLogin}
+                    onSubmitError={console.log}
+                >
+                    <Form autoComplete="off">
+                        <Flex direction="column" size="full" gap="7">
+                            <FormInput
+                                icon="User"
+                                label="name"
+                                name="name"
+                                placeholder="enter your name..."
+                            />
+                            <FormInput
+                                icon="Mail"
+                                label="email"
+                                name="email"
+                                placeholder="enter your email..."
+                            />
+                            <FormInput
+                                icon="Type"
+                                label="subject"
+                                name="subject"
+                                placeholder="enter subject..."
+                            />
+                            <FormInput
+                                icon="MessageCircle"
+                                label="message"
+                                name="message"
+                                placeholder="enter your message..."
+                            />
+                        </Flex>
+                        <FormSubmit inverted>Send</FormSubmit>
+                    </Form>
+                </FormRoot>
+            </Flex>
+
+            <Flex
+                css={{
+                    "@mbp1": {
+                        display: "none",
+                    },
+                }}
+                width="full"
             >
-                <Form autoComplete="off">
-                    <Flex direction="column" size="full" gap="7">
-                        <FormInput
-                            icon="User"
-                            label="name"
-                            name="name"
-                            placeholder="enter your name..."
-                        />
-                        <FormInput
-                            icon="Mail"
-                            label="email"
-                            name="email"
-                            placeholder="enter your email..."
-                        />
-                        <FormInput
-                            icon="Type"
-                            label="subject"
-                            name="subject"
-                            placeholder="enter subject..."
-                        />
-                        <FormInput
-                            icon="MessageCircle"
-                            label="message"
-                            name="message"
-                            placeholder="enter your message..."
-                        />
-                    </Flex>
-                    <FormSubmit inverted>Send</FormSubmit>
-                </Form>
-            </FormRoot>
+                <img src={image} width="100%" />
+            </Flex>
         </Flex>
     );
 };
