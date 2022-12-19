@@ -90,7 +90,7 @@ const StyledContent = styled(DialogPrimitive.Content, {
             },
             left: {
                 $$transformValue: "translate3d(-100%,0,0)",
-                width: "fit-content",
+                width: "30%",
                 "@mbp1": {
                     width: "80%",
                 },

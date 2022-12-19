@@ -9,7 +9,7 @@ export const FullscreenLoader: FC<FullscreenLoaderProps> = ({}) => {
         <Flex
             direction="column"
             center
-            color="primary"
+            color="secondary"
             gap="4"
             css={{
                 position: "relative",
@@ -20,7 +20,7 @@ export const FullscreenLoader: FC<FullscreenLoaderProps> = ({}) => {
                 left: 0,
             }}
         >
-            <CircleLoader color="currentColor" />
+            <CircleLoader size={100} color="currentColor" />
         </Flex>
     );
 };

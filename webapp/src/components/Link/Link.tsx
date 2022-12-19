@@ -4,13 +4,20 @@ import { Text } from "../Text";
 import { ComponentProps } from "@stitches/react";
 import { FC } from "react";
 
-export const StyledLink = styled( RouterLink, Text, {
+export const StyledLink = styled(RouterLink, Text, {
     textDecoration: "none",
-
+    "&:hover": {
+        "&>*": {
+            color: "$appPrimary",
+        },
+        transform: "scale(1.1) translateY(-2px)",
+    },
     "&.active": {
-        color: "$appTextContrast"
-    }
-} );
+        "&>*": {
+            color: "$appPrimary",
+        },
+    },
+});
 
 export interface LinkProps
     extends Omit<ComponentProps<typeof StyledLink>, "to"> {
