@@ -4,6 +4,7 @@ import {
     Articles,
     Contact,
     HomePage,
+    Magazines,
     NotFound,
 } from "../pages";
 import { Route, Routes } from "react-router-dom";
@@ -18,6 +19,7 @@ export const AppRoutes = () => {
                     <Route path="about-us" element={<AboutUs />} />
                     <Route path="contact" element={<Contact />} />
                     <Route path="articles" element={<Articles />} />
+                    <Route path="magazines" element={<Magazines />} />
                     <Route path="articles/:id" element={<Article />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>

@@ -8,12 +8,14 @@ const BlogDescription = styled(Flex, {
     transform: "translate3d(0,-100%,0)",
     opacity: 0,
     height: 0,
-    transition: "all 4s ease-all",
+    transition: "all .3s ease-in-out",
 });
 
 const BlogContainer = styled(Flex, {
     backgroundColor: "white",
     maxWidth: "370px",
+    transition: "all .3s ease-in-out",
+
     "&:hover": {
         boxShadow: " 0px 0px 26px -5px rgba(0,0,0,0.48)",
         [`& ${BlogDescription}`]: {

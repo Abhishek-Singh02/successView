@@ -26,4 +26,5 @@ export * from "./Toast";
 export * from "./TopNavBar";
 export * from "./Layout";
 export * from "./BlogCard";
+export * from "./MagazineCard";
 
