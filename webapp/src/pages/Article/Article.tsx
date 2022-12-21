@@ -11,6 +11,7 @@ export type ArticleProps = {};
 export const Article: FC<ArticleProps> = () => {
     const { id } = useParams();
     const { data, refetch } = useGetOneBlog(id!);
+    console.log(data);
     const { title, image, content } = data as Blog;
     useEffect(() => {
         refetch();

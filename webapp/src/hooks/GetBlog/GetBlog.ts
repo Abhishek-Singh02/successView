@@ -8,6 +8,6 @@ export const getOneBlogFn = async (id: string) => {
 };
 
 export const useGetOneBlog = (id: string) => {
-    return useQuery<Blog>([getOneBlogFn], () => getOneBlogFn(id))
+    return useQuery<Blog>([id], () => getOneBlogFn(id))
 
 }

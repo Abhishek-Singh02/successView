@@ -4,10 +4,10 @@ import { useQuery } from "@tanstack/react-query"
 
 export const getOneMagazineFn = async (id: string) => {
     const response = await axios.get(`/magazines/${id}`);
-    return response.data;
+    return response.data[0]
 };
 
 export const useGetOneMagazine = (id: string) => {
-    return useQuery<Magazine>([getOneMagazineFn], () => getOneMagazineFn(id))
+    return useQuery<Magazine>([id], () => getOneMagazineFn(id))
 
 }

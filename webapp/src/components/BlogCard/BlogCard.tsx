@@ -5,7 +5,7 @@ import { styled } from "@/styles";
 import { useNavigate } from "react-router";
 
 const BlogDescription = styled(Flex, {
-    transform: "translate3d(0,-100%,0)",
+    transform: "translate3d(0,-100%,0) scaleY(0)",
     opacity: 0,
     height: 0,
     transition: "all .3s ease-in-out",
@@ -19,7 +19,7 @@ const BlogContainer = styled(Flex, {
     "&:hover": {
         boxShadow: " 0px 0px 26px -5px rgba(0,0,0,0.48)",
         [`& ${BlogDescription}`]: {
-            transform: "translate3d(0,0,0)",
+            transform: "translate3d(0,0,0)  scaleY(1)",
             opacity: 1,
             height: "100%",
         },

@@ -2,7 +2,7 @@ import { globalCss } from "./stitches.config";
 
 export const globalStyles = globalCss({
     "@import": [
-        "url('https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700;800&family=Roboto&display=swap')"
+        "url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@300;400;500;600;700;800&display=swap')"
     ],
     "*": {
         boxSizing: "border-box",

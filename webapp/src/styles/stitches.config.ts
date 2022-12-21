@@ -38,6 +38,7 @@ export const {
         },
         fonts: {
             sans: [
+                "'Crimson Pro', serif",
                 "Mukta",
                 "Roboto,sans-serif",
                 "Ubuntu",

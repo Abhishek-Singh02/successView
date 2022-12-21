@@ -4,6 +4,7 @@ import {
     Articles,
     Contact,
     HomePage,
+    Magazine,
     Magazines,
     NotFound,
 } from "../pages";
@@ -20,6 +21,7 @@ export const AppRoutes = () => {
                     <Route path="contact" element={<Contact />} />
                     <Route path="articles" element={<Articles />} />
                     <Route path="magazines" element={<Magazines />} />
+                    <Route path="magazines/:id" element={<Magazine />} />
                     <Route path="articles/:id" element={<Article />} />
                     <Route path="*" element={<NotFound />} />
                 </Route>
