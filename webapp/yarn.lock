@@ -2802,6 +2802,14 @@ react-remove-scroll@2.5.5:
     use-callback-ref "^1.3.0"
     use-sidecar "^1.1.2"
 
+react-responsive-pagination@^1.10.0:
+  version "1.10.0"
+  resolved "https://registry.yarnpkg.com/react-responsive-pagination/-/react-responsive-pagination-1.10.0.tgz#d5d4d333fa876549415515f37161541c622c383e"
+  integrity sha512-Q6hxBrfJ2AfTzAhv+qbOE+m/oMJ6qEWQGZCuw73NcMwdPEPcSge9cScdfW8aC5th/OtA1+oJmM5F/yLFrNujmg==
+  dependencies:
+    prop-types "^15.8.1"
+    resize-observer-polyfill "^1.5.1"
+
 react-router-dom@^6.4.5:
   version "6.4.5"
   resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.4.5.tgz#4fdb12efef4f3848c693a76afbeaed1f6ca02047"
@@ -2880,6 +2888,11 @@ remove-accents@0.4.2:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/remove-accents/-/remove-accents-0.4.2.tgz#0a43d3aaae1e80db919e07ae254b285d9e1c7bb5"
   integrity sha512-7pXIJqJOq5tFgG1A2Zxti3Ht8jJF337m4sowbuHsW30ZnkQFnDzy9qBNhgzX8ZLW4+UBcXiiR7SwR6pokHsxiA==
+
+resize-observer-polyfill@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/resize-observer-polyfill/-/resize-observer-polyfill-1.5.1.tgz#0e9020dd3d21024458d4ebd27e23e40269810464"
+  integrity sha512-LwZrotdHOo12nQuZlHEmtuXdqGoOD0OhaxopaNFxWzInpEgaLWoVuAMbTzixuosCx2nEG58ngzW3vxdWoxIgdg==
 
 resolve-from@^4.0.0:
   version "4.0.0"

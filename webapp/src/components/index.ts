@@ -27,4 +27,5 @@ export * from "./TopNavBar";
 export * from "./Layout";
 export * from "./BlogCard";
 export * from "./MagazineCard";
+export * from "./Pagination";
 

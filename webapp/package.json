@@ -42,6 +42,7 @@
         "react-feather": "^2.0.10",
         "react-hook-form": "^7.40.0",
         "react-markdown": "^8.0.4",
+        "react-responsive-pagination": "^1.10.0",
         "react-router-dom": "^6.4.5",
         "react-spinners": "^0.13.7",
         "suspend-react": "^0.0.8",

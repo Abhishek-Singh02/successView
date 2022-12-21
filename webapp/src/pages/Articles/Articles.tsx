@@ -1,16 +1,23 @@
-import { BlogCard, Flex } from "@/components";
+import { BlogCard, Flex, Pagination } from "@/components";
 import { useGetBlogs } from "@/hooks";
-import { FC } from "react";
+import { FC, useState } from "react";
 
 export type ArticlesProps = {};
 
 export const Articles: FC<ArticlesProps> = () => {
     const { data } = useGetBlogs();
+    const [currentData, setCurrentData] = useState<any[]>([]);
     return (
         <Flex width="full" padding={9} justify="evenly" wrap="wrap" gap={7}>
-            {data?.map((blog) => (
+            {currentData?.map((blog) => (
                 <BlogCard key={blog._id} blog={blog} />
             ))}
+            <Pagination
+                data={data!}
+                setPage={setCurrentData}
+                size={10}
+                key={1}
+            />
         </Flex>
     );
 };
