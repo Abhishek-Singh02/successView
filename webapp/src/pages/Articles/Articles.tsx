@@ -6,7 +6,7 @@ export type ArticlesProps = {};
 
 export const Articles: FC<ArticlesProps> = () => {
     const { data } = useGetBlogs();
-    const [currentData, setCurrentData] = useState<any[]>([]);
+    const [currentData, setCurrentData] = useState<any[]>(data!);
     return (
         <Flex width="full" padding={9} justify="evenly" wrap="wrap" gap={7}>
             {currentData?.map((blog) => (
