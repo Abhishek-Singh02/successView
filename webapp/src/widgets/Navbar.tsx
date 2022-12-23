@@ -119,41 +119,53 @@ const MobileMenu = () => {
                     css={{ my: "$10", px: "$4" }}
                     gap="3"
                 >
-                    <Link to="/">
-                        <Text color="base" variant="bodyMedium">
-                            HOME
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="/">
+                            <Text color="base" variant="bodyMedium">
+                                HOME
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                     <Separator gutter={3} />
-                    <Link to="about-us">
-                        <Text color="base" variant="bodyMedium">
-                            ABOUT US
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="about-us">
+                            <Text color="base" variant="bodyMedium">
+                                ABOUT US
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                     <Separator gutter={3} />
-                    <Link to="magazines">
-                        <Text color="base" variant="bodyMedium">
-                            MAGAZINES
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="magazines">
+                            <Text color="base" variant="bodyMedium">
+                                MAGAZINES
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                     <Separator gutter={3} />
-                    <Link to="articles">
-                        <Text color="base" variant="bodyMedium">
-                            ARTICLES
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="articles">
+                            <Text color="base" variant="bodyMedium">
+                                ARTICLES
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                     <Separator gutter={3} />
-                    <Link to="contact">
-                        <Text color="base" variant="bodyMedium">
-                            CONTACT
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="contact">
+                            <Text color="base" variant="bodyMedium">
+                                CONTACT
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                     <Separator />
-                    <Link to="subscribe">
-                        <Text color="base" variant="bodyMedium">
-                            SUBSCRIBE NOW
-                        </Text>
-                    </Link>
+                    <SheetTrigger asChild>
+                        <Link to="subscribe">
+                            <Text color="base" variant="bodyMedium">
+                                SUBSCRIBE NOW
+                            </Text>
+                        </Link>
+                    </SheetTrigger>
                 </Flex>
             </SheetContent>
         </Sheet>
