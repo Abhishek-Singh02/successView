@@ -19,7 +19,11 @@ export const BlogCarousel = () => {
                 showThumbs={false}
             >
                 {data?.slice(-8).map((blog) => (
-                    <Flex key={blog._id} width="full" css={{ height: "80%" }}>
+                    <Flex
+                        key={blog._id}
+                        width="full"
+                        css={{ height: "80%", "@mbp1": { height: "100%" } }}
+                    >
                         <Flex
                             css={{
                                 backgroundColor: "rgba(0,0,0,0.5)",
@@ -53,7 +57,15 @@ export const BlogCarousel = () => {
                                 strokeWidth={1}
                             />
                             <Flex>
-                                <Button size="small" inverted>
+                                <Button
+                                    onClick={() =>
+                                        navigate(`/articles/${blog._id}`, {
+                                            state: { data: blog },
+                                        })
+                                    }
+                                    size="small"
+                                    inverted
+                                >
                                     Read More
                                 </Button>
                             </Flex>
