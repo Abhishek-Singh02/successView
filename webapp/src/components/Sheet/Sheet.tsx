@@ -37,6 +37,7 @@ const StyledOverlay = styled(DialogPrimitive.Overlay, {
     top: 0,
     right: 0,
     bottom: 0,
+    zIndex: 9998,
     left: 0,
     '&[data-state="open"]': {
         animation: `${fadeIn} 150ms cubic-bezier(0.22, 1, 0.36, 1)`,
@@ -58,6 +59,7 @@ const StyledContent = styled(DialogPrimitive.Content, {
     bottom: 0,
     height: "$full",
     willChange: "transform",
+    zIndex: 9999,
     userSelect: "none",
     "&:focus-visible": {
         outline: "none",
