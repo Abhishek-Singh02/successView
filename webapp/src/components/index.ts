@@ -29,4 +29,5 @@ export * from "./BlogCard";
 export * from "./MagazineCard";
 export * from "./Pagination";
 export * from "./Carousel"
+export * from "./BlogCarousel"
 

@@ -1,8 +1,6 @@
-import { Flex } from "@/components";
-import { Footer, Navbar } from "@/widgets";
-import { IconH1 } from "@tabler/icons";
+import { BlogCarousel, Flex } from "@/components";
 import { FC } from "react";
-import { Outlet, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 
 export type HomePageProps = {};
 
@@ -10,7 +8,11 @@ export const HomePage: FC<HomePageProps> = () => {
     const { state } = useLocation();
     console.log(state);
 
-    return <Flex size="full">Home</Flex>;
+    return (
+        <Flex width="full" padding={9}>
+            <BlogCarousel />
+        </Flex>
+    );
 };
 
 export default HomePage;
