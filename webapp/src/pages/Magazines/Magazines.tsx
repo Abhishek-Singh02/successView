@@ -1,7 +1,12 @@
-import { BlogCard, Flex, MagazineCard, Pagination } from "@/components";
+import {
+    BlogCard,
+    Carousel,
+    Flex,
+    MagazineCard,
+    Pagination,
+} from "@/components";
 import { useGetMagazines } from "@/hooks";
 import { FC, useState } from "react";
-import "@/styles/bootstrap.css";
 
 export type MagazinesProps = {};
 
@@ -10,6 +15,7 @@ export const Magazines: FC<MagazinesProps> = () => {
     const [currentData, setCurrentData] = useState<any[]>(data!);
     return (
         <Flex width="full" padding={9} justify="evenly" wrap="wrap" gap={7}>
+            <Carousel />
             {currentData?.map((mag) => (
                 <MagazineCard mag={mag} />
             ))}
