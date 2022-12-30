@@ -19,7 +19,7 @@ export const Magazines: FC<MagazinesProps> = () => {
             {currentData?.map((mag) => (
                 <MagazineCard mag={mag} />
             ))}
-            <Pagination data={data!} size={10} setPage={setCurrentData} />
+            <Pagination data={data!} size={8} setPage={setCurrentData} />
         </Flex>
     );
 };

@@ -15,7 +15,7 @@ export const Pagination: FC<PaginationProps> = ({ data, setPage, size }) => {
     const [currentPage, setCurrentPage] = useState(1);
 
     useEffect(() => {
-        setPage(paginateArray(data, currentPage, 10));
+        setPage(paginateArray(data, currentPage, size));
     }, [currentPage]);
 
     return (

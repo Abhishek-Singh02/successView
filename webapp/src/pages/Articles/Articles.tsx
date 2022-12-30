@@ -15,7 +15,7 @@ export const Articles: FC<ArticlesProps> = () => {
             <Pagination
                 data={data!}
                 setPage={setCurrentData}
-                size={10}
+                size={9}
                 key={1}
             />
         </Flex>
