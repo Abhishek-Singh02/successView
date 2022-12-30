@@ -1,4 +1,5 @@
 import { BlogCarousel, Flex } from "@/components";
+import { UpcomingEdition } from "@/widgets";
 import { FC } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -9,8 +10,9 @@ export const HomePage: FC<HomePageProps> = () => {
     console.log(state);
 
     return (
-        <Flex width="full" padding={9}>
+        <Flex width="full" padding={9} direction="column" gap={5}>
             <BlogCarousel />
+            <UpcomingEdition />
         </Flex>
     );
 };
