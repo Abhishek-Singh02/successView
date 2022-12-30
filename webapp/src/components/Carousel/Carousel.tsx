@@ -19,7 +19,7 @@ export const Carousel = () => {
             <Swiper
                 effect={"coverflow"}
                 centeredSlides={true}
-                slidesPerView={3}
+                slidesPerView={window.innerWidth < 768 ? 3 : 4}
                 loop={true}
                 autoplay={{
                     delay: 1500,
