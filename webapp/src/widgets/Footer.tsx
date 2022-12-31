@@ -98,11 +98,6 @@ export const Footer: FC<FooterProps> = () => {
                             Contact
                         </Text>
                     </Link>
-                    <Link to="subscribe">
-                        <Text color="base" variant="overlineSmall">
-                            Subscribe now
-                        </Text>
-                    </Link>
                 </Flex>
             </Flex>
             <Flex

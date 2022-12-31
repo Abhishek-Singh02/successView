@@ -10,7 +10,7 @@ export const HomePage: FC<HomePageProps> = () => {
 
     return (
         <Flex width="full" padding={9} direction="column" gap={9}>
-            <Marquee title="Do check out our social media handles to stay updated !" />
+            <Marquee title="Check out our social media handles to stay updated !" />
             <BlogCarousel />
             <KnowMore />
             <UpcomingEdition />

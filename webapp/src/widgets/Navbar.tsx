@@ -82,11 +82,6 @@ export const Navbar: FC<NavbarProps> = () => {
                             CONTACT
                         </Text>
                     </Link>
-                    <Link to="subscribe">
-                        <Text color="base" variant="captionMedium">
-                            SUBSCRIBE NOW
-                        </Text>
-                    </Link>
                 </Flex>
                 <Text
                     css={{ "@mbp1": { textAlign: "center" } }}
@@ -155,14 +150,6 @@ const MobileMenu = () => {
                         <Link to="contact">
                             <Text color="base" variant="bodyMedium">
                                 CONTACT
-                            </Text>
-                        </Link>
-                    </SheetTrigger>
-                    <Separator />
-                    <SheetTrigger asChild>
-                        <Link to="subscribe">
-                            <Text color="base" variant="bodyMedium">
-                                SUBSCRIBE NOW
                             </Text>
                         </Link>
                     </SheetTrigger>
