@@ -41,7 +41,7 @@ export const Navbar: FC<NavbarProps> = () => {
                         <img
                             src={Logo}
                             width="30%"
-                            style={{ minWidth: "170px" }}
+                            style={{ minWidth: "200px" }}
                         />
                     </Flex>
                 </Link>
