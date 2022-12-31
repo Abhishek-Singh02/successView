@@ -109,7 +109,7 @@ export const Footer: FC<FooterProps> = () => {
                 }}
             >
                 <Text color="base" variant="bodySmall">
-                    @ Copyright {year}, SuccessView | All rights reserved.{" "}
+                    @ Copyright {year}, Truly Succeed | All rights reserved.{" "}
                 </Text>
             </Flex>
         </Flex>
