@@ -21,11 +21,11 @@ export const Navbar: FC<NavbarProps> = () => {
             width="full"
             align="center"
             css={{
-                "@mbp1": { alignItems: "baseline" },
                 backgroundColor: "$appSecondary",
                 py: "$6",
                 px: "$10",
                 boxShadow: "$4",
+                "@mbp1": { alignItems: "baseline", px: "$5" },
             }}
         >
             <MobileMenu />
