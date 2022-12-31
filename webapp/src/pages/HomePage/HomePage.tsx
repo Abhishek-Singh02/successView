@@ -15,7 +15,6 @@ export type HomePageProps = {};
 export const HomePage: FC<HomePageProps> = () => {
     const { state } = useLocation();
     const { data } = useGetAllNews();
-    console.log(data);
 
     return (
         <Flex width="full" direction="column" css={{ my: "$9" }}>

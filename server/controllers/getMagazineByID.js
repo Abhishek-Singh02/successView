@@ -2,7 +2,6 @@ const { json } = require("express");
 const Magazines = require("../models/magazine");
 
 const getMagazineByID = (async (req, res) => {
-    console.log(req.query.test ? req.query.test : {})
     try {
         let magazine = await Magazines.find({ _id: req.params.id })
         if (!magazine)
