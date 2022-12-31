@@ -13,10 +13,11 @@ export const BlogCarousel = () => {
                 stopOnHover={false}
                 interval={5000}
                 showArrows={false}
-                autoPlay={false}
+                autoPlay={true}
                 infiniteLoop
                 showIndicators={false}
                 showThumbs={false}
+                showStatus={false}
                 dynamicHeight
             >
                 {data?.slice(-8).map((blog) => (
