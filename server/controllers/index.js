@@ -5,4 +5,7 @@ module.exports = {
     getAllBlogs: require("./getBlogs"),
     getBlogByID: require("./getBlogByID"),
     getMagazineByID: require("./getMagazineByID"),
+    getAllNews: require("./getAllNews"),
+    getNewsByID: require("./getNewsByID"),
+    postNews: require("./postNews"),
 }
