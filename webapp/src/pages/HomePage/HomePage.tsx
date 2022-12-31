@@ -15,7 +15,7 @@ export const HomePage: FC<HomePageProps> = () => {
             <KnowMore />
             <UpcomingEdition />
             <BlogUpdates />
-            <Marquee title="Do check out our social media handles to stay updated !" />
+            <Marquee title="Check out our social media handles to stay updated !         " />
         </Flex>
     );
 };

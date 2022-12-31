@@ -1,13 +1,13 @@
 import { Flex, Text } from "@/components";
 import { FC } from "react";
-import Logo from "@/assets/sample.png";
+import Logo from "@/assets/about.png";
 
 export type AboutUsProps = {};
 
 export const AboutUs: FC<AboutUsProps> = () => {
     return (
         <Flex center>
-            <Flex width="full" padding="9" direction="column" gap="5">
+            <Flex width="full" padding="9" direction="column" gap="7">
                 <Text variant="heading6">
                     Welcome to Truly Succeed Magazine! We are a dynamic and
                     dedicated team of writers, editors, and designers committed
@@ -39,16 +39,6 @@ export const AboutUs: FC<AboutUsProps> = () => {
                     meets your needs and budget.
                 </Text>
                 <Text variant="heading6">
-                    Our dedicated team is here to help you reach your target
-                    audience and grow your business. In addition to our
-                    advertising services, we also offer promotional
-                    opportunities through our social media channels and email
-                    newsletters. We are proud of the high-quality product that
-                    we deliver to our readers and advertisers, and are committed
-                    to continuously improving and evolving to meet the needs of
-                    our audience.
-                </Text>
-                <Text variant="heading6">
                     We take pride in the long-term relationships we have built
                     with our readers and partners, and strive to make a positive
                     impact on the lives of those we reach through our magazine.
@@ -57,8 +47,8 @@ export const AboutUs: FC<AboutUsProps> = () => {
                     business goals.
                 </Text>
             </Flex>
-            <Flex css={{ "@mbp1": { display: "none" } }}>
-                <img src={Logo} width="90%" />
+            <Flex css={{ "@mbp1": { display: "none" }, mr: "$9" }}>
+                <img src={Logo} height="100%" />
             </Flex>
         </Flex>
     );
