@@ -18,22 +18,24 @@ export const HomePage: FC<HomePageProps> = () => {
     console.log(data);
 
     return (
-        <Flex width="full" padding={9} direction="column" gap={9}>
+        <Flex width="full" direction="column" css={{ my: "$9" }}>
             <Marquee title="Check out our social media handles to stay updated !             " />
-            <BlogCarousel />
-            <Separator />
-            <KnowMore />
-            <Separator />
-            <Top10 />
-            <Separator />
-            <UpcomingEdition />
-            <Separator />
-            <BlogUpdates />
-            <Separator />
-            <AroundTheWorld />
-            <Separator />
+            <Flex width="full" padding={9} direction="column" gap={9}>
+                <BlogCarousel />
+                <Separator />
+                <Top10 />
+                <Separator />
+                <KnowMore />
+                <Separator />
+                <UpcomingEdition />
+                <Separator />
+                <BlogUpdates />
+                <Separator />
+                <AroundTheWorld />
+                <Separator />
+                <Separator />
+            </Flex>
             <Marquee title="Check out our social media handles to stay updated !             " />
-            <Separator />
         </Flex>
     );
 };

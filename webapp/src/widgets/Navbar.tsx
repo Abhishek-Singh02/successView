@@ -10,7 +10,7 @@ import {
     Text,
 } from "@/components";
 import { FC } from "react";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo2.webp";
 import { IconMenu2, IconSearch } from "@tabler/icons";
 
 export type NavbarProps = {};
@@ -23,7 +23,7 @@ export const Navbar: FC<NavbarProps> = () => {
             css={{
                 "@mbp1": { alignItems: "baseline" },
                 backgroundColor: "$appSecondary",
-                py: "$4",
+                py: "$6",
                 px: "$10",
                 boxShadow: "$4",
             }}
@@ -40,8 +40,8 @@ export const Navbar: FC<NavbarProps> = () => {
                     <Flex center>
                         <img
                             src={Logo}
-                            width="25%"
-                            style={{ minWidth: "100px" }}
+                            width="30%"
+                            style={{ minWidth: "170px" }}
                         />
                     </Flex>
                 </Link>

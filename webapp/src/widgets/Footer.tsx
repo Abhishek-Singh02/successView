@@ -1,6 +1,6 @@
 import { Flex, Link, Text } from "@/components";
 import { FC } from "react";
-import Logo from "@/assets/logo.png";
+import Logo from "@/assets/logo2.webp";
 import {
     IconBrandLinkedin,
     IconBrandFacebook,
@@ -28,7 +28,7 @@ export const Footer: FC<FooterProps> = () => {
                 justify="center"
             >
                 <Flex direction="column" gap="5" width="full">
-                    <img src={Logo} width="50%" style={{ minWidth: "100px" }} />
+                    <img src={Logo} width="90%" style={{ minWidth: "100px" }} />
                     <Flex color="base" gap="5">
                         <IconBrandFacebook
                             strokeWidth={1}
