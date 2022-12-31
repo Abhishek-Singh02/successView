@@ -34,7 +34,7 @@ export const Navbar: FC<NavbarProps> = () => {
                 direction="column"
                 center
                 gap="6"
-                css={{ px: "$14" }}
+                css={{ "@bp1": { px: "$14" } }}
             >
                 <Link to="/">
                     <Flex center>
