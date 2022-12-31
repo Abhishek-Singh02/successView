@@ -1,6 +1,12 @@
-import { BlogCarousel, Flex, Marquee } from "@/components";
+import { BlogCarousel, Flex, Marquee, Separator } from "@/components";
 import { useGetAllNews } from "@/hooks";
-import { BlogUpdates, KnowMore, Top10, UpcomingEdition } from "@/widgets";
+import {
+    AroundTheWorld,
+    BlogUpdates,
+    KnowMore,
+    Top10,
+    UpcomingEdition,
+} from "@/widgets";
 import { FC } from "react";
 import { useLocation } from "react-router-dom";
 
@@ -13,13 +19,21 @@ export const HomePage: FC<HomePageProps> = () => {
 
     return (
         <Flex width="full" padding={9} direction="column" gap={9}>
-            <Marquee title="Check out our social media handles to stay updated !" />
+            <Marquee title="Check out our social media handles to stay updated !             " />
             <BlogCarousel />
+            <Separator />
             <KnowMore />
+            <Separator />
             <Top10 />
+            <Separator />
             <UpcomingEdition />
+            <Separator />
             <BlogUpdates />
-            <Marquee title="Check out our social media handles to stay updated !         " />
+            <Separator />
+            <AroundTheWorld />
+            <Separator />
+            <Marquee title="Check out our social media handles to stay updated !             " />
+            <Separator />
         </Flex>
     );
 };
