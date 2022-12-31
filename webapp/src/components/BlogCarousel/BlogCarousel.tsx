@@ -8,21 +8,25 @@ export const BlogCarousel = () => {
     const { data } = useGetBlogs();
     const navigate = useNavigate();
     return (
-        <Flex width="full">
+        <Flex width="full" align="end">
             <Carousel
                 stopOnHover={false}
                 interval={5000}
                 showArrows={false}
-                autoPlay={true}
+                autoPlay={false}
                 infiniteLoop
                 showIndicators={false}
                 showThumbs={false}
+                dynamicHeight
             >
                 {data?.slice(-8).map((blog) => (
                     <Flex
                         key={blog._id}
                         width="full"
-                        css={{ height: "80%", "@mbp1": { height: "100%" } }}
+                        css={{
+                            height: "80%",
+                            "@mbp1": { height: "100%" },
+                        }}
                     >
                         <Flex
                             css={{
@@ -76,7 +80,11 @@ export const BlogCarousel = () => {
                         </Flex>
                         <img
                             src={blog.image}
-                            style={{ objectFit: "cover", height: "100%" }}
+                            style={{
+                                objectFit: "cover",
+                                height: "100%",
+                                overflow: "clip",
+                            }}
                         />
                     </Flex>
                 ))}

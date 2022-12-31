@@ -22,7 +22,10 @@ export const buttonStyles = css({
         pointerEvents: "none",
         userSelect: "none",
     },
-
+    "&:hover": {
+        backgroundColor: "$appSecondary",
+        color: "$appBase",
+    },
     display: "inline-flex",
     gap: "2",
     flexShrink: 0,
@@ -53,6 +56,10 @@ export const buttonStyles = css({
             true: {
                 color: "$appBase",
                 backgroundColor: "$appSecondary",
+                "&:hover": {
+                    color: "$appSecondary",
+                    backgroundColor: "$appBase",
+                },
             },
         },
         fullWidth: {
