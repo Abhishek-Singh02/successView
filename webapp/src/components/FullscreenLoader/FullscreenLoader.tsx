@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { CircleLoader } from "react-spinners";
+import { CircleLoader, ScaleLoader } from "react-spinners";
 import { Flex } from "../Flex";
 
 export interface FullscreenLoaderProps {}
@@ -20,7 +20,13 @@ export const FullscreenLoader: FC<FullscreenLoaderProps> = ({}) => {
                 left: 0,
             }}
         >
-            <CircleLoader size={100} color="currentColor" />
+            <ScaleLoader
+                height={105}
+                width={6}
+                radius={6}
+                margin={4}
+                color="currentColor"
+            />
         </Flex>
     );
 };
