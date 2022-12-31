@@ -78,6 +78,11 @@ export const Footer: FC<FooterProps> = () => {
                     <Text color="base" variant="overlineLarge">
                         Quick links
                     </Text>
+                    <Link to="/">
+                        <Text color="base" variant="overlineSmall">
+                            Home
+                        </Text>
+                    </Link>
                     <Link to="about-us">
                         <Text color="base" variant="overlineSmall">
                             About us
