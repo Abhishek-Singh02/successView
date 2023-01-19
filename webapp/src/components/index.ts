@@ -31,4 +31,5 @@ export * from "./Pagination";
 export * from "./Carousel"
 export * from "./BlogCarousel"
 export * from "./Marquee"
+export * from "./Anchor"
 

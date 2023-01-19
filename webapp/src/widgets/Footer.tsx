@@ -1,10 +1,11 @@
-import { Flex, Link, Text } from "@/components";
+import { Anchor, Flex, Link, Text } from "@/components";
 import { FC } from "react";
 import Logo from "@/assets/logo2.webp";
 import {
     IconBrandLinkedin,
     IconBrandFacebook,
     IconBrandTwitter,
+    IconMail,
     IconBrandInstagram,
     IconBrandPinterest,
 } from "@tabler/icons";
@@ -30,26 +31,41 @@ export const Footer: FC<FooterProps> = () => {
                 <Flex direction="column" gap="5" width="full">
                     <img src={Logo} width="90%" style={{ minWidth: "100px" }} />
                     <Flex color="base" gap="5">
-                        <IconBrandFacebook
-                            strokeWidth={1}
-                            style={{ cursor: "pointer" }}
-                        />
-                        <IconBrandInstagram
-                            strokeWidth={1}
-                            style={{ cursor: "pointer" }}
-                        />
-                        <IconBrandLinkedin
-                            strokeWidth={1}
-                            style={{ cursor: "pointer" }}
-                        />
-                        <IconBrandPinterest
+                        <Anchor
+                            target="_blank"
+                            href="https://instagram.com/truly_succeed?igshid=ZDdkNTZiNTM="
+                        >
+                            <IconBrandInstagram
+                                strokeWidth={1}
+                                style={{ cursor: "pointer" }}
+                            />
+                        </Anchor>
+                        <Anchor
+                            target="_blank"
+                            href="https://www.linkedin.com/in/truly-succeed-876300262/"
+                        >
+                            <IconBrandLinkedin
+                                strokeWidth={1}
+                                style={{ cursor: "pointer" }}
+                            />
+                        </Anchor>
+                        <Anchor
+                            target="_blank"
+                            href="mailto:info@trulysucceed.com"
+                        >
+                            <IconMail
+                                strokeWidth={1}
+                                style={{ cursor: "pointer" }}
+                            />
+                        </Anchor>
+                        {/* <IconBrandPinterest
                             strokeWidth={1}
                             style={{ cursor: "pointer" }}
                         />
                         <IconBrandTwitter
                             strokeWidth={1}
                             style={{ cursor: "pointer" }}
-                        />
+                        /> */}
                     </Flex>
                 </Flex>
                 <Flex direction="column" gap="5" width="full">
