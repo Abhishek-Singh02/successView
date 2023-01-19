@@ -87,8 +87,8 @@ export const Navbar: FC<NavbarProps> = () => {
                     css={{ "@mbp1": { textAlign: "center" } }}
                     color="primary"
                 >
-                    Submit your interview today and get a chance to featured in
-                    truly succeed magazine !
+                    Submit your interview today and get a chance to get featured
+                    in truly succeed magazine !
                 </Text>
             </Flex>
             <Flex color="base">
