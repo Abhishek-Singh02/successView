@@ -26,7 +26,7 @@ export const HomePage: FC<HomePageProps> = () => {
                 <Separator />
                 <KnowMore />
                 <Separator />
-                <UpcomingEdition />
+                {/* <UpcomingEdition /> */}
                 <Separator />
                 <BlogUpdates />
                 <Separator />
