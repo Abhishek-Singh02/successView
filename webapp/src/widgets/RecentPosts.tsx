@@ -13,7 +13,7 @@ export const RecentPosts: FC<RecentPostsProps> = () => {
         <Flex css={{ flex: "30%" }} width="full" direction="column" gap="5">
             <Text variant="overlineLarge">Recent Posts</Text>
             <Flex direction="column" gap="5">
-                {data?.slice(-5).map((blog) => (
+                {data?.slice(data.length > 5 ? -5 : data.length).map((blog) => (
                     <>
                         <Text
                             variant="overlineMedium"

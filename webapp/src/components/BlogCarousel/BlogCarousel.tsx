@@ -20,75 +20,77 @@ export const BlogCarousel = () => {
                 showStatus={false}
                 dynamicHeight
             >
-                {data?.slice(-8).map((blog) => (
-                    <Flex
-                        key={blog._id}
-                        width="full"
-                        css={{
-                            height: "80%",
-                            "@mbp1": { height: "100%" },
-                        }}
-                    >
+                {data
+                    ?.slice(0, data.length > 8 ? -7 : data.length)
+                    .map((blog) => (
                         <Flex
-                            css={{
-                                backgroundColor: "rgba(0,0,0,0.5)",
-                                position: "absolute",
-                                height: "inherit",
-                                py: "$5",
-                                px: "$8",
-                            }}
-                            direction="column"
-                            align="center"
-                            justify="end"
+                            key={blog._id}
                             width="full"
-                            gap="5"
+                            css={{
+                                height: "80%",
+                                "@mbp1": { height: "100%" },
+                            }}
                         >
-                            <Text
-                                css={{ "@mbp1": { display: "none" } }}
-                                variant="heading3"
-                                color="base"
+                            <Flex
+                                css={{
+                                    backgroundColor: "rgba(0,0,0,0.5)",
+                                    position: "absolute",
+                                    height: "inherit",
+                                    py: "$5",
+                                    px: "$8",
+                                }}
+                                direction="column"
+                                align="center"
+                                justify="end"
+                                width="full"
+                                gap="5"
                             >
-                                {blog.title}
-                            </Text>
-                            <Text
-                                css={{ "@bp1": { display: "none" } }}
-                                variant="heading6"
-                                color="base"
-                            >
-                                {blog.title}
-                            </Text>
-                            <Separator
-                                css={{ "@mbp1": { display: "none" } }}
-                                strokeWidth={1}
-                            />
-                            <Flex>
-                                <Button
-                                    onClick={() =>
-                                        navigate(`/articles/${blog._id}`, {
-                                            state: { data: blog },
-                                        })
-                                    }
-                                    size="small"
-                                    inverted
+                                <Text
+                                    css={{ "@mbp1": { display: "none" } }}
+                                    variant="heading3"
+                                    color="base"
                                 >
-                                    Read More
-                                </Button>
+                                    {blog.title}
+                                </Text>
+                                <Text
+                                    css={{ "@bp1": { display: "none" } }}
+                                    variant="heading6"
+                                    color="base"
+                                >
+                                    {blog.title}
+                                </Text>
+                                <Separator
+                                    css={{ "@mbp1": { display: "none" } }}
+                                    strokeWidth={1}
+                                />
+                                <Flex>
+                                    <Button
+                                        onClick={() =>
+                                            navigate(`/articles/${blog._id}`, {
+                                                state: { data: blog },
+                                            })
+                                        }
+                                        size="small"
+                                        inverted
+                                    >
+                                        Read More
+                                    </Button>
+                                </Flex>
+                                <Separator
+                                    css={{ "@mbp1": { display: "none" } }}
+                                    strokeWidth={1}
+                                />
                             </Flex>
-                            <Separator
-                                css={{ "@mbp1": { display: "none" } }}
-                                strokeWidth={1}
+                            <img
+                                src={blog.image}
+                                style={{
+                                    objectFit: "cover",
+                                    height: "100%",
+                                    overflow: "clip",
+                                }}
                             />
                         </Flex>
-                        <img
-                            src={blog.image}
-                            style={{
-                                objectFit: "cover",
-                                height: "100%",
-                                overflow: "clip",
-                            }}
-                        />
-                    </Flex>
-                ))}
+                    ))}
             </Carousel>
         </Flex>
     );

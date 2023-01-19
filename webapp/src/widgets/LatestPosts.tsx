@@ -8,7 +8,9 @@ export type LatestPostsProps = {};
 export const LatestPosts: FC<LatestPostsProps> = () => {
     const { data } = useGetBlogs();
     const navigate = useNavigate();
-    const randomData = data!.sort(() => 0.5 - Math.random()).slice(0, 3);
+    const randomData = data!
+        .sort(() => 0.5 - Math.random())
+        .slice(0, data!.length > 3 ? 3 : data!.length);
 
     return (
         <Flex width="full" direction="column" gap="5" css={{ px: "$2" }}>

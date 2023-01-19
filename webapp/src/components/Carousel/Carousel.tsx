@@ -43,7 +43,7 @@ export const Carousel = () => {
                     >
                         <Flex
                             direction="column"
-                            css={{ filter: "blur(8px)" }}
+                            css={{ filter: "blur(4px)" }}
                             center
                         >
                             <img src={mag.image} />
