@@ -33,7 +33,7 @@ export const Navbar: FC<NavbarProps> = () => {
                 width="full"
                 direction="column"
                 center
-                gap="6"
+                gap="4"
                 css={{ "@bp1": { px: "$14" } }}
             >
                 <Link to="/">
@@ -51,8 +51,8 @@ export const Navbar: FC<NavbarProps> = () => {
                     align="center"
                     justify="evenly"
                     css={{
-                        px: "$14",
-                        mb: "$6",
+                        px: "20%",
+                        mb: "$4",
                         "@mbp1": { display: "none" },
                     }}
                 >
@@ -87,8 +87,8 @@ export const Navbar: FC<NavbarProps> = () => {
                     css={{ "@mbp1": { textAlign: "center" } }}
                     color="primary"
                 >
-                    Get A Chance To Feature In Magazine By Submitting Your
-                    Interview Today!
+                    Submit your interview today and get a chance to featured in
+                    truly succeed magazine !
                 </Text>
             </Flex>
             <Flex color="base">
