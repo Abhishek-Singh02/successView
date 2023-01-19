@@ -14,7 +14,7 @@ export const Carousel = () => {
     return (
         <div className="container">
             <Flex width="full" center css={{ mb: "$6" }}>
-                <Text variant="heading4">Latest Editions</Text>
+                <Text variant="heading4">Upcoming Editions</Text>
             </Flex>
             <Swiper
                 effect={"coverflow"}
@@ -34,13 +34,18 @@ export const Carousel = () => {
                 }}
                 className="mySwiper"
             >
-                {data?.slice(5).map((mag) => (
+                {data?.slice(-4).map((mag) => (
                     <SwiperSlide
-                        onClick={() =>
-                            navigate(`${mag._id}`, { state: { data: mag } })
-                        }
+                        key={mag._id}
+                        // onClick={() =>
+                        //     navigate(`${mag._id}`, { state: { data: mag } })
+                        // }
                     >
-                        <Flex direction="column" center>
+                        <Flex
+                            direction="column"
+                            css={{ filter: "blur(8px)" }}
+                            center
+                        >
                             <img src={mag.image} />
                         </Flex>
                     </SwiperSlide>

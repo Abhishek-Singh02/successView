@@ -16,10 +16,10 @@ export const Magazines: FC<MagazinesProps> = () => {
     return (
         <Flex width="full" padding={9} justify="evenly" wrap="wrap" gap={7}>
             <Carousel />
-            {currentData?.map((mag) => (
+            {/* {currentData?.map((mag) => (
                 <MagazineCard mag={mag} />
             ))}
-            <Pagination data={data!} size={8} setPage={setCurrentData} />
+            <Pagination data={data!} size={8} setPage={setCurrentData} /> */}
         </Flex>
     );
 };
